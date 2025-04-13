@@ -64,7 +64,7 @@ Follow these steps to set up a new project based on this template:
         *   Update `DATABASE_URL` with your actual database connection string (e.g., for PostgreSQL, SQLite, etc.). Example format for Supabase Postgres is provided in the file.
 
 5.  **Rename Project Placeholders:**
-    *   Edit `package.json`: Change the `"name"` value from `"flask-starter"` to your new project's slug (e.g., `"yttango2"`).
+    *   Edit `package.json`: Change the `"name"` value from `"flask-starter"` to your new project's slug (e.g., `"ThenextInsta"`).
     *   Edit `app/templates/base.html`: Replace all instances of "Flask Starter" with your new project's display name (e.g., "ThenextInsta").
     *   Edit `app/templates/index.html`: Replace "Welcome to Flask Starter!" with your new project's welcome message (e.g., "Welcome to ThenextInsta!").
 

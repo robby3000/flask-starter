@@ -63,12 +63,23 @@ Follow these steps to set up a new project based on this template:
         *   Generate a strong, unique `SECRET_KEY`. You can use `python -c 'import secrets; print(secrets.token_hex(16))'` to generate one.
         *   Update `DATABASE_URL` with your actual database connection string (e.g., for PostgreSQL, SQLite, etc.). Example format for Supabase Postgres is provided in the file.
 
-5.  **Install Node.js Dependencies:**
-    ```bash
-    npm install
-    ```
+5.  **Rename Project Placeholders:**
+    *   Edit `package.json`: Change the `"name"` value from `"flask-starter"` to your new project's slug (e.g., `"yttango2"`).
+    *   Edit `app/templates/base.html`: Replace all instances of "Flask Starter" with your new project's display name (e.g., "ThenextInsta").
+    *   Edit `app/templates/index.html`: Replace "Welcome to Flask Starter!" with your new project's welcome message (e.g., "Welcome to ThenextInsta!").
 
-6.  **Build Frontend Assets:**
+6.  **Install Node.js Dependencies:**
+    *   Remove the old lock file and node_modules directory (essential after changing package name):
+        ```bash
+        rm -f package-lock.json
+        rm -rf node_modules
+        ```
+    *   Install dependencies:
+        ```bash
+        npm install
+        ```
+
+7.  **Build Frontend Assets:**
     *   For development (unminified):
         ```bash
         npm run dev
@@ -78,7 +89,7 @@ Follow these steps to set up a new project based on this template:
         npm run build
         ```
 
-7.  **Initialize the Database:**
+8.  **Initialize the Database:**
     *   Ensure your `DATABASE_URL` in `.env` is correctly configured and the database server is running.
     *   Run the initialization command:
         ```bash
@@ -86,7 +97,7 @@ Follow these steps to set up a new project based on this template:
         ```
     *   This command will create the necessary tables (e.g., the `users` table) based on the models defined in `app/models.py`.
 
-8.  **Run the Development Server:**
+9.  **Run the Development Server:**
     ```bash
     flask run
     ```
@@ -145,4 +156,3 @@ Follow these steps to set up a new project based on this template:
 ├── run.py                  # Flask app entry point and CLI commands
 ├── tailwind.config.js      # Tailwind CSS configuration
 └── webpack.config.js       # Webpack configuration
-```
